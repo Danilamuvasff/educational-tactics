@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Альметьевский музыкальный колледж</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+
+<body>
+  <!-- ======================== ШАПКА С ПЕРЕКЛЮЧАТЕЛЕМ ТЕМЫ ======================== -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="./assets/images/logo/logo.svg" alt="Логотип" width="40" height="40" class="me-2" />
+        <span class="fw-bold">Альметьевский музыкальный колледж</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./assets/pages/catalog.html">Каталог</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Дополнительно</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#about">О нас</a></li>
+              <li><a class="dropdown-item" href="#team">Команда</a></li>
+              <li><a class="dropdown-item" href="#contacts">Контакты</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ -->
+        <div class="form-check form-switch ms-lg-3 text-white">
+          <input class="form-check-input" type="checkbox" id="themeToggle" />
+          <label class="form-check-label" for="themeToggle">
+            <i class="bi bi-sun-fill"></i>
+          </label>
+        </div>
+        <!-- Иконка корзины -->
+        <button class="btn btn-outline-light ms-3 position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
+          <i class="bi bi-cart-fill"></i>
+          <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            style="display: none">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ПЕРВЫЙ ЭКРАН С ВИДЕОФОНОМ -->
+    <section class="hero-section">
+      <video autoplay loop muted playsinline class="hero-video">
+        <source src="./assets/video/hero-bg.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="container h-100 position-relative">
+        <div class="row h-100 align-items-center text-center text-white">
+          <div class="col-12">
+            <h1 class="display-3 fw-bold animate-title">
+              АЛЬМЕТЬЕВСКИЙ МУЗЫКАЛЬНЫЙ КОЛЛЕДЖ
+            </h1>
+            <p class="lead mb-4 animate-subtitle">
+              Нововведение! Электронный журнал успеваемости современный
+              инструмент для контроля и планирования учебного процесса
+            </p>
+            <a href="./assets/pages/catalog.html" class="btn btn-custom btn-lg animate-button">Начать работу</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- РАЗДЕЛ "О НАС" -->
+    <section id="about" class="about-section py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-4">О нашем колледже</h2>
+            <p class="about-text">
+              Альметьевский музыкальный колледж — ведущее учебное заведение в
+              регионе, готовящее высококвалифицированных специалистов в
+              области музыкального искусства.
+            </p>
+            <p class="about-text">
+              Миссия нашего колледжа – создать все условия, чтобы раскрыть
+              потенциал каждого студента и подготовить его к взрослой жизни.
+              Учебный процесс в колледже направлен на подготовку специалистов
+              в области музыкального искусства.
+            </p>
+            <p class="about-text">
+              «Электронный журнал успеваемости» — наш новый шаг в
+              цифровизацию, позволяющий студентам, преподавателям и родителям
+              всегда быть в курсе текущих успехов.
+            </p>
+            <ul class="about-list">
+              <li>• Актуальная информация об успеваемости 24/7</li>
+              <li>• Удобное расписание занятий и мероприятий</li>
+              <li>• Прямая связь с преподавателями</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-image-wrapper">
+              <img src="./assets/images/building/img_1.jpg" alt="Здание колледжа"
+                class="img-fluid rounded-4 shadow about-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЛАЙДЕР "НАША КОМАНДА" -->
+    <section id="team" class="team-section py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Наша команда</h2>
+        <div class="swiper team-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="team-card">
+                <img src="./assets/images/staff/img1.png" alt="Директор" class="team-img" />
+                <div class="team-info">
+                  <h4 class="team-name">Пайдуллина Гузал Атласовна</h4>
+                  <p class="team-role">Директор колледжа АМК</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="team-card">
+                <img src="./assets/images/staff/img2.png" alt="Преподаватель" class="team-img" />
+                <div class="team-info">
+                  <h4 class="team-name">Усманова Ландыш Ринатовна</h4>
+                  <p class="team-role">Зам. по учеб. и метод. работе</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="team-card">
+                <img src="./assets/images/staff/img3.png" alt="Преподаватель" class="team-img" />
+                <div class="team-info">
+                  <h4 class="team-name">Хайруллина Ирина Александровна</h4>
+                  <p class="team-role">Зам. директора по финансам</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="team-card">
+                <img src="./assets/images/staff/img4.png" alt="Преподаватель" class="team-img" />
+                <div class="team-info">
+                  <h4 class="team-name">Шатрашанова Мария Викторовна</h4>
+                  <p class="team-role">Зам. директора по воспит. работе</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОНТАКТЫ И КАРТА -->
+    <section id="contacts" class="contacts-section py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-md-5">
+            <h2 class="section-title mb-4">Контакты</h2>
+            <div class="contact-info">
+              <p class="mb-3">
+                <strong>Адрес:</strong> г. Альметьевск, ул. Нефтяников, 12
+              </p>
+              <p class="mb-3"><strong>Телефон:</strong> +7 (8553)-33-48-41</p>
+              <p class="mb-3"><strong>Email:</strong> amyz5@rambler.ru</p>
+              <p class="mb-3">
+                <strong>Часы работы:</strong> Пн-Пт: 8:00 - 17:00
+              </p>
+            </div>
+            <div class="map-wrapper mt-4">
+              <iframe src="https://yandex.ru/map-widget/v1/?ll=52.283746,54.902511&pt=52.283746,54.902511&z=17&l=map"
+                frameborder="0" allowfullscreen="true"></iframe>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <h2 class="section-title mb-4">Обратная связь</h2>
+            <form id="feedbackForm" class="feedback-form">
+              <div class="mb-3">
+                <label for="name" class="form-label">Ваше имя</label>
+                <input type="text" class="form-control" id="name" placeholder="Иван Иванов" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Сообщение</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Ваш вопрос или отзыв..."
+                  required></textarea>
+              </div>
+              <button type="submit" class="btn btn-custom">
+                Отправить сообщение
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- МОДАЛЬНОЕ ОКНО КОРЗИНЫ -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            <i class="bi bi-cart-fill"></i> Моя корзина
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="cartItemsList"></div>
+          <div class="border-top pt-3 mt-3 text-end">
+            <h5>
+              Итого: <span id="cartTotal" class="text-success">0 ₽</span>
+            </h5>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Продолжить покупки
+          </button>
+          <button type="button" id="checkoutBtn" class="btn btn-custom">
+            Оформить заказ
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer mt-auto py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <span>© 2026 Альметьевский музыкальный колледж</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
